@@ -3,6 +3,10 @@
 node_modules
 yarn-error.log
 
+# dotenv variables
+.env
+.env.development
+
 # Build directory
 /public
 .DS_Store

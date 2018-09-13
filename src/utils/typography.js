@@ -1,5 +1,19 @@
 import Typography from 'typography'
-import theme from 'typography-theme-funston'
+import theme from 'typography-theme-lawton'
+
+theme.overrideThemeStyles = ({ rhythm }, options) => ({
+  a: {
+    color: 'black',
+    textDecoration: 'none',
+    borderBottom: '2px solid gold',
+  },
+
+  'a:hover': {
+    color: 'black',
+    textDecoration: 'none',
+    borderBottom: '2px solid gold',
+  },
+})
 
 const typography = new Typography(theme)
 

@@ -1,6 +1,8 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
-    title: 'Imkerei Hoffmann',
+    title: 'Privatimkerei Hoffmann',
   },
   plugins: [
     {
@@ -20,7 +22,7 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/logo.jpg', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',
@@ -29,6 +31,11 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     // Typography.js
-    `gatsby-plugin-typography`
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
   ],
 }

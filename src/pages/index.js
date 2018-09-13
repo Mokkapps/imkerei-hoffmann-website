@@ -1,103 +1,115 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import styled from 'styled-components'
 
-import Layout from '../components/layout'
-import Aside from '../components/Aside'
+import Layout from '../layout'
+import content from '../content'
 
-const Container = styled.div`
+import Spotlight from '../components/Spotlight'
+import Button from '../components/Button'
+
+const SpotlightContainer = styled.section`
   display: flex;
-  flex-direction: column;
-  height: 100vh;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+`
+const CenteredText = styled.p`
+  text-align: center;
+  font-size: 1.3rem;
+`
 
-  @media (min-width: 768px) {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
+const AboutSection = styled.section`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+  background: lightgray;
+  padding: 2rem;
+  border-radius: 10px;
+`
+
+const MeImage = styled(Img)`
+  border-radius: 10px;
+  margin-right: 1rem;
+
+  @media (max-width: 420px) {
+    max-width: 250px;
   }
 `
 
-const Main = styled.main`
-  background-color: whitesmoke;
-  padding: 2rem;
-  flex: 1 1 auto;
+const AboutText = styled.div`
+  width: 60%;
 
-  @media (min-width: 768px) {
-    flex: 1 1 auto;
-    overflow: auto;
+  @media (max-width: 823px) {
+    width: 100%;
+  }
+`
+
+const ButtonGroup = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  a {
+    margin: 0.5rem;
   }
 `
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <Container>
-      <Aside image={data.file} />
-      <Main>
-        <section>
-          <h1>Herzlich Willkommen bei der Imkerei Hoffmann</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-            quam aliquid harum nobis magni modi perspiciatis eius ullam placeat,
-            quo consectetur recusandae aperiam cum laudantium at est
-            reprehenderit exercitationem ea.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-            quam aliquid harum nobis magni modi perspiciatis eius ullam placeat,
-            quo consectetur recusandae aperiam cum laudantium at est
-            reprehenderit exercitationem ea.
-          </p>
-        </section>
-        <hr />
-        <section>
-          <h2>Unsere Leistungen</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-            quam aliquid harum nobis magni modi perspiciatis eius ullam placeat,
-            quo consectetur recusandae aperiam cum laudantium at est
-            reprehenderit exercitationem ea.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-            quam aliquid harum nobis magni modi perspiciatis eius ullam placeat,
-            quo consectetur recusandae aperiam cum laudantium at est
-            reprehenderit exercitationem ea.
-          </p>
-        </section>
-        <hr />
-        <section>
-          <h2>Impressionen</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-            quam aliquid harum nobis magni modi perspiciatis eius ullam placeat,
-            quo consectetur recusandae aperiam cum laudantium at est
-            reprehenderit exercitationem ea.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-            quam aliquid harum nobis magni modi perspiciatis eius ullam placeat,
-            quo consectetur recusandae aperiam cum laudantium at est
-            reprehenderit exercitationem ea.
-          </p>
-        </section>
-        <hr />
-        <section>
-          <h2>Kontakt</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-            quam aliquid harum nobis magni modi perspiciatis eius ullam placeat,
-            quo consectetur recusandae aperiam cum laudantium at est
-            reprehenderit exercitationem ea.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-            quam aliquid harum nobis magni modi perspiciatis eius ullam placeat,
-            quo consectetur recusandae aperiam cum laudantium at est
-            reprehenderit exercitationem ea.
-          </p>
-        </section>
-      </Main>
-    </Container>
+    <AboutSection>
+      <AboutText>
+        <h1 style={{ textAlign: 'center' }}>
+          Hallo! Mein Name ist Renate Hoffmann.
+        </h1>
+        <CenteredText>
+          Ich bin die Imkerin in unserer Privatimkerei.
+        </CenteredText>
+        <CenteredText>
+          Die Imkertradition geht in unserer Familie bis in das Jahr 1932
+          zurück.
+        </CenteredText>
+        <CenteredText>
+          Was als Hobby begann, wächst nun immer mehr zu einem{' '}
+          <strong>Familienbetrieb</strong> heran.
+        </CenteredText>
+        <CenteredText>
+          Mit viel Liebe zur Honigbiene und großem Pflegeaufwand arbeiten wir
+          auf eine nachhaltige Weise mit und an gesunden Honigbienen, denn nur
+          gesunde Honigbienen sind ein Garant für unsere Zukunft .
+        </CenteredText>
+        <CenteredText>
+          Daher setzen wir alles daran, dass unsere Völker bestens versorgt sind
+          und ihren Bedürfnissen entsprechend gehalten werden.
+        </CenteredText>
+        <CenteredText>
+          Auf diesen Seiten können Sie sich über meinen Betrieb und mich, die
+          Produkte und die ökologische Betriebsweise und ihre Besonderheiten
+          informieren, aber auch direkt bestellen.
+        </CenteredText>
+      </AboutText>
+      <MeImage fixed={data.me.childImageSharp.fixed} />
+      <ButtonGroup>
+        <Button href="/products">Unsere Produkte →</Button>
+        <Button href="/impressions">Unsere Standorte →</Button>
+        <Button href="/contact">Kontaktiere uns →</Button>
+      </ButtonGroup>
+    </AboutSection>
+    <section>
+      <h1 style={{ textAlign: 'center' }}>Unsere Grundsätze</h1>
+      <SpotlightContainer>
+        {content.spotlight.map(item => {
+          const { imageId, text } = item
+          return <Spotlight key={imageId} text={text} image={data[imageId]} />
+        })}
+      </SpotlightContainer>
+    </section>
   </Layout>
 )
 
@@ -105,9 +117,30 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "me.jpg" }) {
+    me: file(relativePath: { eq: "me.jpg" }) {
       childImageSharp {
-        fixed(width: 150, height: 150) {
+        fixed(width: 300, height: 400) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    bees: file(relativePath: { eq: "bees.jpg" }) {
+      childImageSharp {
+        fixed(width: 250, height: 250) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    regional: file(relativePath: { eq: "regional.jpg" }) {
+      childImageSharp {
+        fixed(width: 250, height: 250) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    honey: file(relativePath: { eq: "honey.jpg" }) {
+      childImageSharp {
+        fixed(width: 250, height: 250) {
           ...GatsbyImageSharpFixed
         }
       }
