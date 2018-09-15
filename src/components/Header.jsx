@@ -64,7 +64,7 @@ const Header = ({ siteTitle }) => (
   <Container>
     <LogoText to="/">
       <LogoContainer>
-        <Logo src={logo} width="40" height="40" />
+        <Logo alt="Logo" src={logo} width="40" height="40" />
         {siteTitle}
       </LogoContainer>
     </LogoText>

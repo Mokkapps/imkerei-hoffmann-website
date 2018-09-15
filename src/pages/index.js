@@ -7,7 +7,6 @@ import Layout from '../layout'
 import content from '../content'
 
 import Spotlight from '../components/Spotlight'
-import Button from '../components/Button'
 
 const SpotlightContainer = styled.section`
   display: flex;
@@ -50,17 +49,6 @@ const AboutText = styled.div`
   }
 `
 
-const ButtonGroup = styled.div`
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-
-  a {
-    margin: 0.5rem;
-  }
-`
-
 const IndexPage = ({ data }) => (
   <Layout>
     <AboutSection>
@@ -69,37 +57,32 @@ const IndexPage = ({ data }) => (
           Hallo! Mein Name ist Renate Hoffmann.
         </h1>
         <CenteredText>
-          Ich bin die Imkerin in unserer Privatimkerei.
+          Ich bin die Imkerin in unserer <strong>Privatimkerei Hoffmann</strong>
+          .
         </CenteredText>
         <CenteredText>
-          Die Imkertradition geht in unserer Familie bis in das Jahr 1932
-          zurück.
+          Die Imkertradition geht in unserer Familie bis in das{' '}
+          <strong>Jahr 1932</strong> zurück.
         </CenteredText>
         <CenteredText>
           Was als Hobby begann, wächst nun immer mehr zu einem{' '}
           <strong>Familienbetrieb</strong> heran.
         </CenteredText>
         <CenteredText>
-          Mit viel Liebe zur Honigbiene und großem Pflegeaufwand arbeiten wir
-          auf eine nachhaltige Weise mit und an gesunden Honigbienen, denn nur
-          gesunde Honigbienen sind ein Garant für unsere Zukunft .
+          Mit viel <strong>Liebe zur Honigbiene</strong> und großem
+          Pflegeaufwand arbeiten wir auf eine nachhaltige Weise mit und an{' '}
+          <strong>gesunden Honigbienen</strong>, denn nur gesunde Honigbienen
+          sind ein Garant für unsere Zukunft.
         </CenteredText>
         <CenteredText>
-          Daher setzen wir alles daran, dass unsere Völker bestens versorgt sind
-          und ihren Bedürfnissen entsprechend gehalten werden.
-        </CenteredText>
-        <CenteredText>
-          Auf diesen Seiten können Sie sich über meinen Betrieb und mich, die
-          Produkte und die ökologische Betriebsweise und ihre Besonderheiten
-          informieren, aber auch direkt bestellen.
+          Auf diesen Seiten können Sie sich über{' '}
+          <a href="/products">unsere Produkte</a>, unsere Arbeitsweise und{' '}
+          <a href="/impressions">unsere Bienen-Standorte</a> erkundigen.
+          Natürlich können sie uns{' '}
+          <a href="/contact">auch für Bestellungen kontaktieren.</a>
         </CenteredText>
       </AboutText>
       <MeImage fixed={data.me.childImageSharp.fixed} />
-      <ButtonGroup>
-        <Button href="/products">Unsere Produkte →</Button>
-        <Button href="/impressions">Unsere Standorte →</Button>
-        <Button href="/contact">Kontaktiere uns →</Button>
-      </ButtonGroup>
     </AboutSection>
     <section>
       <h1 style={{ textAlign: 'center' }}>Unsere Grundsätze</h1>

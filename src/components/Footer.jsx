@@ -17,8 +17,11 @@ const Content = styled.div`
 export default () => (
   <Footer>
     <Content>
-      <a href="https://github.com/Mokkapps/website">Erstellt</a> mit viel
-      &hearts; von <a href="https://www.mokkapps.de">Mokkapps</a>
+      <a href="https://github.com/Mokkapps/imkerei-hoffmann-website">
+        Erstellt
+      </a>{' '}
+      mit viel &hearts; von <a href="https://www.mokkapps.de">Mokkapps</a> |{' '}
+      <a href="/impressum">Impressum</a>
     </Content>
   </Footer>
 )
