@@ -63,8 +63,8 @@ const ProductsPage = ({ data }) => (
         </a>
       </p>
       <p>
-        Wir verkaufen nur Honig unserer eigenen Bienenvölker, daher kann es auch
-        mal passieren, dass der ein oder andere Honig vergriffen ist.
+        Wir verkaufen nur Honig von unseren eigenen Bienenvölker, daher kann es
+        auch mal passieren, dass der ein oder andere Honig vergriffen ist.
       </p>
     </section>
     <h2>Produkte</h2>
@@ -88,18 +88,22 @@ const ProductsPage = ({ data }) => (
         <TextContainer>
           <h4 style={{ marginTop: '1rem' }}>Flüssig oder fest?</h4>
           <p>
-            Jeder Honig ist bei der Ernte flüssig. Er setzt sich zusammen aus
-            ca. 80 Prozent Frucht- und Traubenzucker, 18 Prozent Wasser und 1
-            Prozent gesunder Wirkstoffe. Je nach Mischverhältnis von Frucht- und
-            Traubenzucker, wird der Honig fest oder bleibt flüssig. Einen festen
-            Honig bezeichnet man auch als kristallisierten Honig. Wenn der
-            Traubenzuckeranteil hoch sein sollte, kristallisiert der Honig
-            schneller. Ein hoher Fruchtzuckeranteil ist beispielsweise in
-            Akazienhonig vorzufinden. Cremigen Honig produziert der Imker durch
-            ein regelmäßiges rühren des Honig, dadurch werden die
-            Zuckerkristalle klein und verteilen sich gleichmäßig. Flüssig oder
-            fest sagt nichts über die Qualität des Honigs aus, sondern bleibt
-            Geschmackssache.
+            Der Honig wird flüssig aus der Bienenwabe geerntet. Er besteht aus
+            ca. 80% Frucht- und Traubenzucker, 18% Wasser und 1% gesunder
+            Wirkstoffe. Ob der Honig flüssig oder fest ist, entscheidet das
+            Mischverhältnis von Frucht- und Traubenzucker. Festen Honig
+            bezeichnet man auch als kristallisierten Honig. Honig mit hohem
+            Traubenzuckeranteil kristallisiert schneller. Durch regelmäßiges
+            Rühren des Honigs werden die Zuckerkristalle zerkleinert und sie
+            verteilen sich gleichmäßig, wodurch cremiger Honig ensteht. Der
+            cremig-gerührte Honig bleibt in dieser Konsistenz.
+          </p>
+          <p>
+            <strong>
+              Letztendlich bleibt es aber Geschmackssache, ob man flüssigen oder
+              festen Honig lieber mag. Qualitativ sind beide Honigvarianten
+              gleich gut.
+            </strong>
           </p>
         </TextContainer>
       </FlexContainer>
@@ -107,27 +111,41 @@ const ProductsPage = ({ data }) => (
         <TextContainer>
           <h4>Honiggewinnung</h4>
           <p>
-            Honig entsteht in einem langen Prozess und ist seit vielen
-            Jahrhunderten eine kostbare Substanz. Eine Biene fliegt mehrere
-            hundert Blüten an und sammelt in ihrer Honigblase den süßen Saft. Im
-            Bienenstock übergibt die Sammlerin diesen Saft den Stockbienen.
-            Diese wandeln ihn in Honig um. Die Stockbiene fügt dem Saft
-            körpereigene Substanzen zu, sodass der Wassergehalt reduziert wird.
-            Anschließend wird der Honig in den Waben eingelagert und dient als
-            Wintervorrat. Der Imker darf erst Honig entnehmen, wenn die Bienen
-            mehr einlagern, als sie selbst als Nahrung benötigen. Der Imker
-            schleudert den Honig aus der Wabe. Die Waben werden anschließen den
-            Bienen zurückgegeben, damit Sie neuen Honig einlagern können. Jeder
-            Honig ist kaltgeschleudert, so auch das „Nettegold“! Anschließend
-            wird er Honig noch gesiebt, gerührt und in Gläser abgefüllt.
+            Honig ist seit vielen Jahrhunderten eine kostbare Substanz und die
+            Enstehung ist ein langwieriger Prozess. Insgesamt fliegt die Biene
+            für ein Glas Honig dreimal um die Welt. Eine Biene fliegt mehrere
+            hundert Blüten an und sammelt in ihrer Honigblase den süßen Saft.
+            Dieser Saft wird im Bienenstock von den Sammlerinnen an die
+            Stockbienen übergeben. Um den Wassergehalt zu reduzieren, fügt die
+            Stockbiene dem Saft noch körpereigene Substanzen hinzu. Danach wird
+            der Honig im Stock in Waben eingelagert und dient dem Volk als
+            Wintervorrat. Im Bienenstock übergibt die Sammlerin diesen Saft den
+            Stockbienen. Diese wandeln ihn in Honig um. Die Stockbiene fügt dem
+            Saft körpereigene Substanzen zu, sodass der Wassergehalt reduziert
+            wird. Anschließend wird der Honig in den Waben eingelagert und dient
+            als Wintervorrat. Der Imker darf erst Honig entnehmen, wenn die
+            Bienen mehr einlagern, als sie selbst als Nahrung benötigen. Der
+            Imker schleudert den Honig aus der Wabe. Die Waben werden
+            anschließen den Bienen zurückgegeben, damit Sie neuen Honig
+            einlagern können. Jeder Honig ist kaltgeschleudert, so auch das
+            „Nettegold“! Anschließend wird er Honig noch gesiebt, gerührt und in
+            Gläser abgefüllt.
           </p>
           <p>
-            Die Bienenhaltung wird vom Veterinäramt überwacht. Nur wenn es den
-            Bienen gut geht, produzieren sie Honig. „Nettegold“ ist ein reines
-            Naturprodukt ohne irgendwelche Zusätze. Auch wenn Bienen als lästig
-            empfunden werden, ist jeder Mensch von ihnen abhängig. Die Imkerei
-            ist eine wichtige Tätigkeit, um die Biodiversität und das
-            ökologische Gleichgewicht zu erhalten.
+            Zur Honiggewinnung wird der Honig aus der Wabe geschleudert.
+            Anschließend werden die Waben dem Volk zurückgegeben, damit neuer
+            Honig eingelagert werden kann.
+          </p>
+          <p>
+            <strong>
+              Unser Honig wird kalt geschleudert, gesiebt (eventuell noch cremig
+              gerührt) und in Gläser abgefüllt.
+            </strong>
+          </p>
+          <p>
+            <strong>
+              Unser Honig ist ein reines Naturprodukt ohne irgendwelche Zusätze.
+            </strong>
           </p>
         </TextContainer>
         <ImageContainer>
@@ -160,13 +178,25 @@ const ProductsPage = ({ data }) => (
         </ImageContainer>
         <TextContainer>
           <p style={{ marginTop: '1rem' }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel omnis
-            fugiat perspiciatis eum sunt fuga labore numquam, temporibus aliquam
-            aliquid itaque dignissimos recusandae nemo voluptatem reiciendis
-            dolorum eius repudiandae accusamus. Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. Voluptates vero expedita minus, ab
-            sed velit autem ipsum nemo placeat recusandae exercitationem totam
-            iure quibusdam nostrum ea asperiores esse pariatur eveniet.
+            Bienenwachstücher verwendet man wie Frischhaltefolie und sie
+            bestehen aus Baumwolle und Bienenwachs.
+          </p>
+          <p>Mögliche Anwendungen:</p>
+          <ul>
+            <li>Lebensmittel wie etwa Obst, Gemüse, Käse, Brot einwickeln</li>
+            <li>Schüsseln abdecken</li>
+            <li>Brotzeit einpacken</li>
+          </ul>
+          <p>
+            Die Tücher sind nicht geeignet für für rohes Fleisch oder Fisch.
+          </p>
+          <p>
+            Man kann die Tücher wiederverwenden und sie halten bis zu einem
+            Jahr.
+          </p>
+          <p>
+            Zum Reinigen reicht es das Tuch feucht abzuwischen oder unter unter
+            fliessendem (kalten bis handwarmen) Wasser abzuspülen.
           </p>
         </TextContainer>
       </FlexContainer>

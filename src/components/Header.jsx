@@ -7,7 +7,7 @@ import ProductIcon from 'react-feather/dist/icons/shopping-bag'
 import ImpressionIcon from 'react-feather/dist/icons/eye'
 import ContactIcon from 'react-feather/dist/icons/send'
 
-import logo from '../images/logo.jpg'
+import logo from '../images/logo.png'
 import MenuItem from './MenuItem'
 
 const Container = styled.div`
