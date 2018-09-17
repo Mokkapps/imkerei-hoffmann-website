@@ -27,8 +27,15 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            {
+              name: 'description',
+              content:
+                'Alle wichtigen Informationen über die Privatimkerei-Hoffmann',
+            },
+            {
+              name: 'keywords',
+              content: 'imkerei, privatimkerei, honig, bienenwachstücher',
+            },
           ]}
         >
           <html lang="de" />
