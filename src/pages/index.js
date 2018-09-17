@@ -76,10 +76,10 @@ const IndexPage = ({ data }) => (
         </CenteredText>
         <CenteredText>
           Auf diesen Seiten können Sie sich über{' '}
-          <a href="/products">unsere Produkte</a>, unsere Arbeitsweise und{' '}
-          <a href="/impressions">unsere Bienen-Standorte</a> erkundigen.
+          <a href="/produkte">unsere Produkte</a>, unsere Arbeitsweise und{' '}
+          <a href="/einblicke">unsere Bienen-Standorte</a> erkundigen.
           Natürlich können sie uns{' '}
-          <a href="/contact">auch für Bestellungen kontaktieren.</a>
+          <a href="/kontakt">auch für Bestellungen kontaktieren.</a>
         </CenteredText>
       </AboutText>
       <MeImage fixed={data.me.childImageSharp.fixed} />

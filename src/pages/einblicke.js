@@ -30,7 +30,7 @@ const ImpressionsPage = ({ data }) => (
         einmal besuchen. Hier kann ich Ihnen gerne ausführlich über
         Bienenhaltung und Imkereiprodukte Auskunft geben. Wünschen Sie eine
         Besichtigung, allein, mit der Familie oder mit einer Gruppe,{' '}
-        <a href="/contact">rufen Sie bitte vorher an.</a>
+        <a href="/kontakt">rufen Sie bitte vorher an.</a>
       </p>
       <p>Natürlich dürfen Sie auch alle Produkte probieren!</p>
       <SubHeading>Siegersdorf / Landkreis Straubing-Bogen</SubHeading>

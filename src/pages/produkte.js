@@ -54,11 +54,11 @@ const ProductsPage = ({ data }) => (
     <section>
       <p>
         Unsere Produkte können Sie{' '}
-        <a href="/contact">bei uns an der Haustür erwerben.</a>
+        <a href="/kontakt">bei uns an der Haustür erwerben.</a>
       </p>
       <p>
         Damit Sie nicht vergebens kommen,{' '}
-        <a href="/contact">
+        <a href="/kontakt">
           rufen Sie doch bitte vorher an oder schicken eine E-Mail und
           vereinbaren einen Termin.
         </a>

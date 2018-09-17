@@ -16,7 +16,7 @@ const ImpressumPage = () => (
     <p>
       Telefon: 09944/2283
       <br />
-      E-Mail: kontakt@hoffmann-imkerei.de
+      E-Mail: kontakt@privatimkerei-hoffmann.de
     </p>
     <h3>Haftung f&uuml;r Inhalte</h3>{' '}
     <p>

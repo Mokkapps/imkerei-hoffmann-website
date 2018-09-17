@@ -70,9 +70,9 @@ const Header = ({ siteTitle }) => (
     </LogoText>
     <Menu>
       <MenuItem to="/" text="Über uns" icon={HomeIcon} />
-      <MenuItem to="/products" text="Produkte" icon={ProductIcon} />
-      <MenuItem to="/impressions" text="Einblicke" icon={ImpressionIcon} />
-      <MenuItem to="/contact" text="Kontakt" icon={ContactIcon} />
+      <MenuItem to="/produkte" text="Produkte" icon={ProductIcon} />
+      <MenuItem to="/einblicke" text="Einblicke" icon={ImpressionIcon} />
+      <MenuItem to="/kontakt" text="Kontakt" icon={ContactIcon} />
     </Menu>
   </Container>
 )

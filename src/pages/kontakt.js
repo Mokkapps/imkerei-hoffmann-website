@@ -29,7 +29,11 @@ const ContactSection = styled.section`
   align-content: center;
   align-items: center;
   justify-content: space-evenly;
-`;
+`
+
+const Anchor = styled.a`
+  text-align: center;
+`
 
 const ContactPage = () => (
   <Layout>
@@ -40,9 +44,9 @@ const ContactPage = () => (
         <StyledText>Pfarrhofstraße 7</StyledText>
         <StyledText>94267 Prackenbach</StyledText>
         <StyledText>Telefon: 09944/2283</StyledText>
-        <a href="mailto:kontakt@hoffmann-imkerei.de">
-          kontakt@hoffmann-imkerei.de
-        </a>
+        <Anchor href="mailto:kontakt@privatimkerei-hoffmann.de">
+          kontakt@privatimkerei-hoffmann.de
+        </Anchor>
       </Contact>
       <ContactForm />
     </ContactSection>

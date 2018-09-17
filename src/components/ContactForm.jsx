@@ -11,9 +11,6 @@ const Container = styled.div`
       input {
         display: block;
       }
-      input {
-        min-width: 350px;
-      }
     }
   }
 `
