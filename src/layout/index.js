@@ -7,8 +7,11 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
+import './layout.scss'
+
 const Content = styled.div`
   padding: 2rem;
+  flex-grow: 1;
 `
 
 const Layout = ({ children }) => (
@@ -40,9 +43,11 @@ const Layout = ({ children }) => (
         >
           <html lang="de" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <Content>{children}</Content>
-        <Footer />
+        <main>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <Content>{children}</Content>
+          <Footer />
+        </main>
       </>
     )}
   />

@@ -77,8 +77,8 @@ const IndexPage = ({ data }) => (
         <CenteredText>
           Auf diesen Seiten können Sie sich über{' '}
           <a href="/produkte">unsere Produkte</a>, unsere Arbeitsweise und{' '}
-          <a href="/einblicke">unsere Bienen-Standorte</a> erkundigen.
-          Natürlich können sie uns{' '}
+          <a href="/einblicke">unsere Bienen-Standorte</a> erkundigen. Natürlich
+          können sie uns{' '}
           <a href="/kontakt">auch für Bestellungen kontaktieren.</a>
         </CenteredText>
       </AboutText>
@@ -92,6 +92,16 @@ const IndexPage = ({ data }) => (
           return <Spotlight key={imageId} text={text} image={data[imageId]} />
         })}
       </SpotlightContainer>
+    </section>
+    <section>
+      <h1 style={{ textAlign: 'center', marginTop: '3rem' }}>Newsletter</h1>
+      <p style={{ textAlign: 'center'}}>
+        Melden Sie sich bei <a href="/newsletter">unserem Newsletter</a> an.
+      </p>
+      <p style={{ textAlign: 'center'}}>
+        Dadurch erhalten Sie automatisch die neuesten Informationen und Angebote
+        per E-Mail.
+      </p>
     </section>
   </Layout>
 )
