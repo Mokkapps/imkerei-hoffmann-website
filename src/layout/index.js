@@ -14,6 +14,12 @@ const Content = styled.div`
   flex-grow: 1;
 `
 
+const Container = styled.div`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+`
+
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -43,11 +49,11 @@ const Layout = ({ children }) => (
         >
           <html lang="de" />
         </Helmet>
-        <main>
+        <Container>
           <Header siteTitle={data.site.siteMetadata.title} />
           <Content>{children}</Content>
           <Footer />
-        </main>
+        </Container>
       </>
     )}
   />
