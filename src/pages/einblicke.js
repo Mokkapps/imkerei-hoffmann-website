@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
+import PropTypes from 'prop-types';
 
 import Layout from '../layout'
 import content from '../content'
@@ -50,6 +51,10 @@ const ImpressionsPage = ({ data }) => (
     </section>
   </Layout>
 )
+
+ImpressionsPage.propTypes = {
+  data: PropTypes.object.isRequired
+}
 
 export default ImpressionsPage
 

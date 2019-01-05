@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import PropTypes from 'prop-types';
 
 import Layout from '../layout'
 import image from '../images/sat1-warencheck.png'
@@ -49,7 +50,6 @@ const VideoContainer = styled.div`
 
 const ProductsPage = ({ data }) => (
   <Layout>
-    {console.log(data)}
     <h1>Unsere Produkte</h1>
     <section>
       <p>
@@ -204,6 +204,10 @@ const ProductsPage = ({ data }) => (
     </Section>
   </Layout>
 )
+
+ProductsPage.propTypes = {
+  data: PropTypes.object.isRequired
+}
 
 export default ProductsPage
 

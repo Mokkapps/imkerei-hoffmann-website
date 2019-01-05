@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import PropTypes from 'prop-types';
 
 import Layout from '../layout'
 import content from '../content'
@@ -105,6 +106,10 @@ const IndexPage = ({ data }) => (
     </section>
   </Layout>
 )
+
+IndexPage.propTypes = {
+  data: PropTypes.object.isRequired
+}
 
 export default IndexPage
 

@@ -4,6 +4,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
+    siteUrl: 'https://privatimkerei-hoffmann.de',
     title: 'Privatimkerei Hoffmann',
   },
   plugins: [
@@ -46,5 +47,7 @@ module.exports = {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
+    `gatsby-plugin-sitemap`,
+    'gatsby-plugin-robots-txt'
   ],
 }

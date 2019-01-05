@@ -1,7 +1,7 @@
 import Typography from 'typography'
 import theme from 'typography-theme-lawton'
 
-theme.overrideThemeStyles = ({ rhythm }, options) => ({
+theme.overrideThemeStyles = () => ({
   a: {
     color: 'black',
     textDecoration: 'none',

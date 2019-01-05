@@ -72,6 +72,12 @@ const ContactForm = () => (
       netlify-honeypot="bot-field"
       netlify="true"
     >
+      <p hidden>
+        <Label>
+          Don’t fill this out if you&#39;re human: <input name="bot-field" />
+        </Label>
+      </p>
+      <p />
       <p>
         <Label htmlFor="name">Name</Label>
         <Input name="name" type="text" required />
@@ -84,10 +90,10 @@ const ContactForm = () => (
         <Label htmlFor="message">Ihre Nachricht:</Label>
         <TextArea name="message" required />
       </p>
+      <div data-netlify-recaptcha="true"></div>
       <p style={{ marginTop: '1rem' }}>
         <Button>Abschicken</Button>
       </p>
-      <Input type="hidden" name="form-name" value="contact-form" />
     </form>
   </Container>
 )

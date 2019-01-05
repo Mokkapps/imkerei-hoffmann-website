@@ -193,7 +193,7 @@ const DatenschutzPage = () => (
     <p>
       <a
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active"
       >
         https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active
@@ -232,7 +232,7 @@ const DatenschutzPage = () => (
     <p>
       <a
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         href="https://www.google.com/intl/de/policies/privacy/partners"
       >
         https://www.google.com/intl/de/policies/privacy/partners
@@ -246,7 +246,7 @@ const DatenschutzPage = () => (
     <p>
       <a
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         href="https://tools.google.com/dlpage/gaoptout?hl=de"
       >
         https://tools.google.com/dlpage/gaoptout?hl=de
@@ -268,12 +268,17 @@ const DatenschutzPage = () => (
     <p>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html"
       >
         Muster-Datenschutzerklärung
       </a>{' '}
       der{' '}
-      <a target="_blank" href="https://www.ratgeberrecht.eu/">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.ratgeberrecht.eu/"
+      >
         Anwaltskanzlei Weiß &amp; Partner
       </a>
     </p>
