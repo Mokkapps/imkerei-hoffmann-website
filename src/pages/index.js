@@ -63,7 +63,7 @@ const IndexPage = ({ data }) => (
         </CenteredText>
         <CenteredText>
           Die Imkertradition geht in unserer Familie bis in das{' '}
-          <strong>Jahr 1932</strong> zurück.
+          <strong>Jahr 1890</strong> zurück.
         </CenteredText>
         <CenteredText>
           Was als Hobby begann, wächst nun immer mehr zu einem{' '}
