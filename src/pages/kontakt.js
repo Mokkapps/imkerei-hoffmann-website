@@ -54,16 +54,6 @@ const ContactPage = () => (
       <h2>Standort</h2>
       <GoogleMap />
     </section>
-    <section>
-      <h2>Newsletter</h2>
-      <p>
-        Melden Sie sich bei <a href="/newsletter">unserem Newsletter</a> an.
-      </p>
-      <p>
-        Dadurch erhalten Sie automatisch die neuesten Informationen und Angebote
-        per E-Mail.
-      </p>
-    </section>
   </Layout>
 )
 

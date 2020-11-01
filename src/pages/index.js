@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 import Layout from '../layout'
 import content from '../content'
@@ -94,21 +94,11 @@ const IndexPage = ({ data }) => (
         })}
       </SpotlightContainer>
     </section>
-    <section>
-      <h1 style={{ textAlign: 'center', marginTop: '3rem' }}>Newsletter</h1>
-      <p style={{ textAlign: 'center'}}>
-        Melden Sie sich bei <a href="/newsletter">unserem Newsletter</a> an.
-      </p>
-      <p style={{ textAlign: 'center'}}>
-        Dadurch erhalten Sie automatisch die neuesten Informationen und Angebote
-        per E-Mail.
-      </p>
-    </section>
   </Layout>
 )
 
 IndexPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
 }
 
 export default IndexPage

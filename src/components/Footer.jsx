@@ -24,8 +24,8 @@ export default () => (
       mit viel &hearts; von <a href="https://www.mokkapps.de">Mokkapps</a>
     </Content>
     <Content style={{ marginTop: '.5rem' }}>
-      <a href="/newsletter">Newsletter</a> | <a href="/impressum">Impressum</a>{' '}
-      | <a href="/datenschutz">Datenschutzerklärung</a>
+      <a href="/impressum">Impressum</a> |{' '}
+      <a href="/datenschutz">Datenschutzerklärung</a>
     </Content>
   </Footer>
 )
