@@ -29,6 +29,9 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    `gatsby-plugin-netlify`,
+    `gatsby-plugin-preload-fonts`,
+    `gatsby-plugin-netlify-cache`,
     'gatsby-plugin-styled-components',
     // Gatsby Image
     `gatsby-transformer-sharp`,
