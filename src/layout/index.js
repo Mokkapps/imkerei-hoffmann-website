@@ -1,24 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-
-import './layout.scss'
-
-const Content = styled.div`
-  padding: 2rem;
-  flex-grow: 1;
-`
-
-const Container = styled.div`
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -31,7 +17,7 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <>
         <Helmet
           title={data.site.siteMetadata.title}
@@ -49,11 +35,11 @@ const Layout = ({ children }) => (
         >
           <html lang="de" />
         </Helmet>
-        <Container>
+        <div className="flex flex-col min-h-screen">
           <Header siteTitle={data.site.siteMetadata.title} />
-          <Content>{children}</Content>
+          <div className="p-8 flex-grow">{children}</div>
           <Footer />
-        </Container>
+        </div>
       </>
     )}
   />

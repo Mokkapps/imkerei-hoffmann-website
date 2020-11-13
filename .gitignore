@@ -4,7 +4,32 @@
 node_modules
 yarn-error.log
 
-.idea
+### Intellij ###
+
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# Generated files
+.idea/**/contentModel.xml
+
+# File-based project format
+*.iws
+
+# IntelliJ
+out/
+
+### Intellij Patch ###
+# Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
+
+# *.iml
+# modules.xml
+# .idea/misc.xml
+# *.ipr
+.idea/
 
 # dotenv variables
 .env

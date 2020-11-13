@@ -28,23 +28,15 @@ module.exports = {
         icon: 'src/images/logo.png', // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-postcss`,
     'gatsby-plugin-offline',
     `gatsby-plugin-netlify`,
     `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-netlify-cache`,
-    'gatsby-plugin-styled-components',
+    `gatsby-plugin-sitemap`,
+    'gatsby-plugin-robots-txt',
     // Gatsby Image
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // Typography.js
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-sitemap`,
-    'gatsby-plugin-robots-txt'
   ],
 }

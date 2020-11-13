@@ -1,69 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-
-  form {
-    p {
-      label,
-      input {
-        display: block;
-      }
-    }
-  }
-`
-
-const Label = styled.label`
-  margin: 1rem 0 1rem 0;
-  color: black;
-`
-
-const Input = styled.input`
-  height: 2rem;
-  border-radius: 0.25rem;
-  border: none;
-  background: lightgrey;
-  padding: 0.25rem 1rem;
-  overflow: auto;
-  font: inherit;
-`
-
-const TextArea = styled.textarea`
-  height: 2rem;
-  border-radius: 0.25rem;
-  border: none;
-  background: lightgrey;
-  padding: 0.25rem 1rem;
-  overflow: auto;
-  font: inherit;
-  padding: 1rem;
-  resize: vertical;
-  min-height: 150px;
-  width: 100%;
-`
-
-const Button = styled.button`
-  color: black;
-  border-radius: 0.25rem;
-  border-width: 0px;
-  display: inline-block;
-  font-size: 1rem;
-  line-height: 1.5;
-  cursor: pointer;
-  padding: 0.375rem 0.75rem;
-  background-color: gold;
-
-  &:hover {
-    color: black;
-    background-color: rgb(236, 177, 0);
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  }
-`
 
 const ContactForm = () => (
-  <Container>
+  <div className="flex justify-center">
     <form
       name="contact-form"
       action="/success"
@@ -73,29 +11,51 @@ const ContactForm = () => (
       netlify="true"
     >
       <p hidden>
-        <Label>
+        <label className="m-4 text-main-text">
           Don’t fill this out if you&#39;re human: <input name="bot-field" />
-        </Label>
+        </label>
       </p>
       <p />
       <p>
-        <Label htmlFor="name">Name</Label>
-        <Input name="name" type="text" required />
+        <label htmlFor="name" className="m-4 text-main-text">
+          Name
+        </label>
+        <input
+          name="name"
+          type="text"
+          required
+          className="h-8 rounded-md bg-secondary overflow-auto block"
+        />
       </p>
       <p>
-        <Label htmlFor="email">E-Mail</Label>
-        <Input name="email" type="email" required />
+        <label htmlFor="email" className="m-4 text-main-text">
+          E-Mail
+        </label>
+        <input
+          name="email"
+          type="email"
+          required
+          className="h-8 rounded-md bg-secondary overflow-auto block"
+        />
       </p>
       <p>
-        <Label htmlFor="message">Ihre Nachricht:</Label>
-        <TextArea name="message" required />
+        <label htmlFor="message" className="m-4 text-main-text">
+          Ihre Nachricht:
+        </label>
+        <textarea
+          name="message"
+          required
+          className="h-8 rounded-md bg-secondary p-4 overflow-auto resize-y min-h-4 w-full"
+        />
       </p>
       <div data-netlify-recaptcha="true"></div>
       <p style={{ marginTop: '1rem' }}>
-        <Button>Abschicken</Button>
+        <button className="text-main-text rounded-md p-4 hover:bg-accent-dark hover:shadow-md">
+          Abschicken
+        </button>
       </p>
     </form>
-  </Container>
+  </div>
 )
 
 export default ContactForm

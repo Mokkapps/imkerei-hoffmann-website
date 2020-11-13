@@ -1,52 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import styled from 'styled-components'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 import Layout from '../layout'
 import image from '../images/sat1-warencheck.png'
-
-const FlexContainer = styled.section`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 1rem;
-`
-
-const RoundedImage = styled(Img)`
-  border-radius: 10px;
-`
-
-const TextContainer = styled.div`
-  width: 60%;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-`
-
-const ImageContainer = styled.div`
-  width: 30%;
-  margin: 0 1rem 0 1rem;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-`
-
-const Section = styled.section`
-  background-color: lightgray;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-`
-
-const VideoContainer = styled.div`
-  margin: 0 auto;
-  width: 60%;
-`
 
 const ProductsPage = ({ data }) => (
   <Layout>
@@ -80,13 +38,16 @@ const ProductsPage = ({ data }) => (
         Der Einsatz von Medikamenten findet bei uns generell nicht statt!
       </strong>
     </p>
-    <Section>
+    <section className="bg-primary p-4 rounded-lg shadow-md">
       <h3>Honig</h3>
-      <FlexContainer>
-        <ImageContainer>
-          <RoundedImage fluid={data.honey.childImageSharp.fluid} />
-        </ImageContainer>
-        <TextContainer>
+      <section className="flex flex-wrap justify-start items-center mt-4">
+        <div className="w-1/3 lg:w-full mx-0 my-4">
+          <Img
+            className="rounded-lg"
+            fluid={data.honey.childImageSharp.fluid}
+          />
+        </div>
+        <div className="w-2/3 lg:w-full">
           <h4 style={{ marginTop: '1rem' }}>Flüssig oder fest?</h4>
           <p>
             Der Honig wird flüssig aus der Bienenwabe geerntet. Er besteht aus
@@ -106,10 +67,10 @@ const ProductsPage = ({ data }) => (
               gleich gut.
             </strong>
           </p>
-        </TextContainer>
-      </FlexContainer>
-      <FlexContainer>
-        <TextContainer>
+        </div>
+      </section>
+      <section className="flex flex-wrap justify-start items-center mt-4">
+        <div className="w-2/3 lg:w-full">
           <h4>Honiggewinnung</h4>
           <p>
             Honig ist seit vielen Jahrhunderten eine kostbare Substanz und die
@@ -148,11 +109,14 @@ const ProductsPage = ({ data }) => (
               Unser Honig ist ein reines Naturprodukt ohne irgendwelche Zusätze.
             </strong>
           </p>
-        </TextContainer>
-        <ImageContainer>
-          <RoundedImage fluid={data.honeyExtractor.childImageSharp.fluid} />
-        </ImageContainer>
-      </FlexContainer>
+        </div>
+        <div className="w-1/3 lg:w-full mx-0 my-4">
+          <Img
+            className="rounded-lg"
+            fluid={data.honeyExtractor.childImageSharp.fluid}
+          />
+        </div>
+      </section>
       <h4 style={{ marginTop: '1rem' }}>
         Was bedeutet „Honig aus EG- und Nicht-EG-Ländern“?
       </h4>
@@ -161,7 +125,7 @@ const ProductsPage = ({ data }) => (
         <strong>„Honig aus EG- und Nicht-EG-Ländern“</strong>. Der Fernsehsender
         Sat 1 hat recherchiert, was es damit auf sich hat.
       </p>
-      <VideoContainer>
+      <div className="m-auto w-2/3">
         <a href="http://www.sat1.de/tv/der-grosse-waren-check/video/22-honig-aus-aller-welt-clip">
           <img
             alt="Video - Waren Check - Honig aus aller Welt"
@@ -169,15 +133,18 @@ const ProductsPage = ({ data }) => (
             src={image}
           />
         </a>
-      </VideoContainer>
-    </Section>
-    <Section style={{ marginTop: '2rem' }}>
+      </div>
+    </section>
+    <section className="bg-primary p-4 mt-4 rounded-lg shadow-md">
       <h3>Bienenwachstücher</h3>
-      <FlexContainer>
-        <ImageContainer>
-          <RoundedImage fluid={data.beeswaxCloth.childImageSharp.fluid} />
-        </ImageContainer>
-        <TextContainer>
+      <section className="flex flex-wrap justify-start items-center mt-4">
+        <div className="w-1/3 lg:w-full mx-0 my-4">
+          <Img
+            className="rounded-lg"
+            fluid={data.beeswaxCloth.childImageSharp.fluid}
+          />
+        </div>
+        <div className="w-2/3 lg:w-full">
           <p style={{ marginTop: '1rem' }}>
             Bienenwachstücher verwendet man wie Frischhaltefolie und sie
             bestehen aus Baumwolle und Bienenwachs.
@@ -199,14 +166,14 @@ const ProductsPage = ({ data }) => (
             Zum Reinigen reicht es das Tuch feucht abzuwischen oder unter unter
             fliessendem (kalten bis handwarmen) Wasser abzuspülen.
           </p>
-        </TextContainer>
-      </FlexContainer>
-    </Section>
+        </div>
+      </section>
+    </section>
   </Layout>
 )
 
 ProductsPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
 }
 
 export default ProductsPage

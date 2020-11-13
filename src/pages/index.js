@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 import Layout from '../layout'
@@ -9,90 +8,52 @@ import content from '../content'
 
 import Spotlight from '../components/Spotlight'
 
-const SpotlightContainer = styled.section`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-`
-const CenteredText = styled.p`
-  text-align: center;
-  font-size: 1.3rem;
-`
-
-const AboutSection = styled.section`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 2rem;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-
-  background: lightgray;
-  padding: 2rem;
-  border-radius: 10px;
-`
-
-const MeImage = styled(Img)`
-  border-radius: 10px;
-  margin-right: 1rem;
-
-  @media (max-width: 420px) {
-    max-width: 250px;
-  }
-`
-
-const AboutText = styled.div`
-  width: 60%;
-
-  @media (max-width: 823px) {
-    width: 100%;
-  }
-`
-
 const IndexPage = ({ data }) => (
   <Layout>
-    <AboutSection>
-      <AboutText>
+    <section className="flex flex-wrap justify-evenly items-center mb-8 shadow-md bg-primary p-8 rounded-2xl">
+      <div className="w-2/3 lg:w-full">
         <h1 style={{ textAlign: 'center' }}>
           Hallo! Mein Name ist Renate Hoffmann.
         </h1>
-        <CenteredText>
+        <p className="text-center text-lg">
           Ich bin die Imkerin in unserer <strong>Privatimkerei Hoffmann</strong>
           .
-        </CenteredText>
-        <CenteredText>
+        </p>
+        <p className="text-center text-lg">
           Die Imkertradition geht in unserer Familie bis in das{' '}
           <strong>Jahr 1890</strong> zurück.
-        </CenteredText>
-        <CenteredText>
+        </p>
+        <p className="text-center text-lg">
           Was als Hobby begann, wächst nun immer mehr zu einem{' '}
           <strong>Familienbetrieb</strong> heran.
-        </CenteredText>
-        <CenteredText>
+        </p>
+        <p className="text-center text-lg">
           Mit viel <strong>Liebe zur Honigbiene</strong> und großem
           Pflegeaufwand arbeiten wir auf eine nachhaltige Weise mit und an{' '}
           <strong>gesunden Honigbienen</strong>, denn nur gesunde Honigbienen
           sind ein Garant für unsere Zukunft.
-        </CenteredText>
-        <CenteredText>
+        </p>
+        <p className="text-center text-lg">
           Auf diesen Seiten können Sie sich über{' '}
           <a href="/produkte">unsere Produkte</a>, unsere Arbeitsweise und{' '}
           <a href="/einblicke">unsere Bienen-Standorte</a> erkundigen. Natürlich
           können sie uns{' '}
           <a href="/kontakt">auch für Bestellungen kontaktieren.</a>
-        </CenteredText>
-      </AboutText>
-      <MeImage fixed={data.me.childImageSharp.fixed} />
-    </AboutSection>
+        </p>
+      </div>
+      <Img
+        className="rounded-lg mr-4 md:max-w-56"
+        fixed={data.me.childImageSharp.fixed}
+      />
+    </section>
     <section>
       <h1 style={{ textAlign: 'center' }}>Unsere Grundsätze</h1>
-      <SpotlightContainer>
-        {content.spotlight.map(item => {
+      <section className="flex flex-wrap justify-evenly">
+        {content.spotlight.map((item) => {
           const { imageId, text } = item
           return <Spotlight key={imageId} text={text} image={data[imageId]} />
         })}
-      </SpotlightContainer>
+      </section>
     </section>
   </Layout>
 )
