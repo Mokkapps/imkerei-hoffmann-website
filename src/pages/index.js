@@ -2,16 +2,18 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
+import { navigate } from 'gatsby-link'
 
 import Layout from '../layout'
 import content from '../content'
-
+import { sendCustomAnalyticsEvent } from '../utils/helper'
 import Spotlight from '../components/Spotlight'
+import Button from '../components/Button'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <section className="flex flex-wrap justify-evenly items-center mb-8 shadow-md bg-primary p-8 rounded-2xl">
-      <div className="w-2/3 lg:w-full">
+    <section className="flex flex-wrap justify-evenly items-center mb-8 shadow-md bg-primary-light p-8 rounded-2xl">
+      <div className="w-full lg:w-1/2">
         <h1 style={{ textAlign: 'center' }}>
           Hallo! Mein Name ist Renate Hoffmann.
         </h1>
@@ -42,12 +44,22 @@ const IndexPage = ({ data }) => (
         </p>
       </div>
       <Img
-        className="rounded-lg mr-4 md:max-w-56"
+        className="rounded-lg mr-4 mt-4 md:max-w-56"
         fixed={data.me.childImageSharp.fixed}
       />
     </section>
+    <section className="flex justify-center my-8">
+      <Button
+        onClick={() => {
+          sendCustomAnalyticsEvent('Kontakt Button Landing Page')
+          navigate('/kontakt')
+        }}
+      >
+        Kontaktieren Sie Mich
+      </Button>
+    </section>
     <section>
-      <h1 style={{ textAlign: 'center' }}>Unsere Grundsätze</h1>
+      <h1 className="text-center">Unsere Grundsätze</h1>
       <section className="flex flex-wrap justify-evenly">
         {content.spotlight.map((item) => {
           const { imageId, text } = item

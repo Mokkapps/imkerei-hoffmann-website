@@ -10,8 +10,8 @@ import logo from '../images/logo.png'
 import MenuItem from './MenuItem'
 
 const Header = ({ siteTitle }) => (
-  <div className="bg-accent shadow-md flex flex-wrap items-center justify-between active:bg-text-main active:text-accent active:no-underline">
-    <Link to="/" className="text-main-text no-underline text-2xl font-bold">
+  <div className="bg-primary shadow-md flex flex-wrap items-center justify-between">
+    <Link to="/" className="text-main-text text-3xl font-bold border-b-0">
       <div className="flex items-center">
         <img
           className="rounded-full mb-0 mx-4"

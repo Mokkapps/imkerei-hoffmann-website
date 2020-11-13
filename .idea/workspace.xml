@@ -1,16 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="61592458-ddf2-49fb-aa45-7ddc60ecfaf7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Impression.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Impression.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MenuItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MenuItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Spotlight.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Spotlight.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/kontakt.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/kontakt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/produkte.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/produkte.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/typography.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="0d0a8897-c75f-4fb1-b40b-e861fcc025e1" />
+  <component name="KubernetesApiPersistence">
+    <option name="context" value="cp" />
+    <option name="namespace" value="default" />
+  </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="24" />
     <option name="width" value="1280" />
     <option name="height" value="723" />
   </component>
+  <component name="ProjectId" id="1jgLp9T5Kre9Lc3DOCQKo28mqXs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="yarn install" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="61592458-ddf2-49fb-aa45-7ddc60ecfaf7" name="Default Changelist" comment="" />
+      <created>1604220967869</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604220967869</updated>
+      <workItem from="1604220969153" duration="1213000" />
+      <workItem from="1604222868169" duration="1467000" />
+      <workItem from="1605199770028" duration="6876000" />
+      <workItem from="1605273981633" duration="3609000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="360" y="233" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605209417586">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="360" y="233" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1605209417586" />
+    <state x="633" y="380" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605209299709">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="633" y="380" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1792.1097@0.23.1792.1097" timestamp="1605209299709" />
+    <state x="634" y="325" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605251254134">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="634" y="325" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1605251254134" />
+    <state width="1792" height="384" key="GridCell.Tab.0.bottom" timestamp="1605274692426">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1792" height="384" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1605274692426" />
+    <state width="1792" height="384" key="GridCell.Tab.0.center" timestamp="1605274692426">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1792" height="384" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1605274692426" />
+    <state width="1792" height="384" key="GridCell.Tab.0.left" timestamp="1605274692425">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1792" height="384" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1605274692425" />
+    <state width="1792" height="384" key="GridCell.Tab.0.right" timestamp="1605274692426">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1792" height="384" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1605274692426" />
+    <state width="500" height="456" key="SwitcherDM" timestamp="1605277249214">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="500" height="456" key="SwitcherDM/0.23.1792.1097@0.23.1792.1097" timestamp="1605277249214" />
+    <state x="594" y="326" width="604" height="490" key="find.popup" timestamp="1605252225428">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="594" y="326" width="604" height="490" key="find.popup/0.23.1792.1097@0.23.1792.1097" timestamp="1605252225428" />
+    <state x="561" y="266" width="670" height="675" key="run.anything.popup" timestamp="1605209072426">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="561" y="266" width="670" height="675" key="run.anything.popup/0.23.1792.1097@0.23.1792.1097" timestamp="1605209072426" />
   </component>
 </project>

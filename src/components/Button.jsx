@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Button = ({ children, href }) => (
-  <a
-    className="text-main-text rounded-lg border-0 no-underline inline-block text-base leading-6 cursor-pointer py-4 px-4 bg-accent hover:shadow-md"
-    href={href}
+const Button = ({ children, onClick }) => (
+  <button
+    onClick={() => onClick()}
+    className="text-light-text rounded-lg border-0 no-underline inline-block text-base leading-6 cursor-pointer py-4 px-4 bg-accent hover:shadow-md uppercase"
   >
     {children}
-  </a>
+  </button>
 )
 
-export default Button;
+export default Button

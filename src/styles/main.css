@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:wght@800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.theme-light {
+  --primary: #ffc107;
+  --primary-light: #ffecb3;
+  --primary-dark: #ffa000;
+  --secondary: #bdbdbd;
+  --text-main: #212121;
+  --text-secondary: #757575;
+  --text-light: #ffff;
+  --background: #ecf0f1;
+  --accent: #795548;
+}
+
+.theme-dark {
+  --primary: #ffc107;
+  --primary-light: #ffecb3;
+  --primary-dark: #ffa000;
+  --secondary: #bdbdbd;
+  --text-main: #212121;
+  --text-light: #ffff;
+  --text-secondary: #757575;
+  --background: #ecf0f1;
+  --accent: #795548;
+}
+
+:root {
+}
+
+@layer base {
+  p {
+    @apply mb-2;
+    @apply leading-8;
+  }
+
+  ol,
+  ul {
+    list-style: initial;
+    @apply ml-4;
+  }
+
+  li {
+    @apply mb-2;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Domine', sans-serif;
+    font-weight: bold;
+    line-height: 1.1;
+    @apply mb-4;
+  }
+
+  h1 {
+    @apply text-4xl;
+
+    @media (max-width: 640px) {
+      @apply text-3xl;
+    }
+  }
+
+  h2 {
+    @apply text-3xl;
+
+    @media (max-width: 640px) {
+      @apply text-2xl;
+    }
+  }
+
+  h3 {
+    @apply text-xl;
+
+    @media (max-width: 640px) {
+      @apply text-lg;
+    }
+  }
+
+  a {
+    color: var(--text-main);
+    text-decoration: none;
+    border-bottom: 2px solid var(--primary-dark);
+  }
+
+  a:hover {
+    color: var(--text-main);
+    text-decoration: none;
+    border-bottom: 2px solid var(--primary-dark);
+  }
+
+  input {
+    @apply h-8;
+    @apply w-full;
+    @apply rounded-md;
+    @apply bg-secondary;
+    @apply overflow-auto;
+    @apply block;
+  }
+
+  textarea {
+    @apply h-32;
+    @apply p-4;
+    @apply w-full;
+    @apply rounded-md;
+    @apply bg-secondary;
+    @apply overflow-auto;
+    @apply block;
+    @apply resize-y;
+  }
+
+  body {
+    height: 100%;
+    background: lightgray;
+  }
+
+  html {
+    height: 100%;
+    box-sizing: border-box;
+    background: lightgray;
+  }
+
+  .product-section {
+    @apply bg-primary-light;
+    @apply p-8;
+    @apply rounded-lg;
+    @apply shadow-lg;
+    @apply my-8;
+  }
+}

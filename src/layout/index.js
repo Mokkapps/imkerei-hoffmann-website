@@ -35,7 +35,7 @@ const Layout = ({ children }) => (
         >
           <html lang="de" />
         </Helmet>
-        <div className="flex flex-col min-h-screen">
+        <div className="theme-light bg-background text-main-text flex flex-col min-h-screen">
           <Header siteTitle={data.site.siteMetadata.title} />
           <div className="p-8 flex-grow">{children}</div>
           <Footer />

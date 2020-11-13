@@ -5,11 +5,11 @@ export default ({ icon, text, to }) => {
   const Icon = icon
   return (
     <Link
-      className="text-main-text no-underline border-b-0 p-4 flex flex-wrap items-center justify-center hover:bg-text-main hover:text-accent"
-      activeClassName="active"
+      className="text-main-text p-4 border-b-4 border-primary flex flex-wrap items-center justify-center hover:border-primary-dark"
+      activeStyle={{ borderColor: 'red' }}
       to={to}
     >
-      {Icon ? <Icon style={{ marginRight: '.5em' }} /> : null}
+      {Icon ? <Icon className="mr-2" /> : null}
       {text}
     </Link>
   )

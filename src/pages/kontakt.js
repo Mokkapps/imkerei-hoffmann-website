@@ -8,7 +8,7 @@ const ContactPage = () => (
   <Layout>
     <h1>Kontakt</h1>
     <section className="flex flex-wrap content-center items-center justify-evenly">
-      <div className="p-4 bg-primary rounded-lg mb-8 shadow-md flex flex-col items-center justify-center">
+      <div className="p-4 bg-primary-light rounded-lg mb-8 shadow-md flex flex-col items-center justify-center">
         <p className="font-bold">Renate Hoffmann</p>
         <p className="font-bold">Pfarrhofstraße 7</p>
         <p className="font-bold">94267 Prackenbach</p>

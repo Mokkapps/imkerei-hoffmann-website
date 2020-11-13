@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default () => (
-  <footer className="bg-primary p-8 mt-4 h-24 flex flex-col">
+  <footer className="bg-primary p-4 h-full flex flex-col">
     <div className="m-auto">
       <a href="https://github.com/Mokkapps/imkerei-hoffmann-website">
         Erstellt

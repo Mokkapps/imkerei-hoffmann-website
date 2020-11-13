@@ -9,7 +9,7 @@ import image from '../images/sat1-warencheck.png'
 const ProductsPage = ({ data }) => (
   <Layout>
     <h1>Unsere Produkte</h1>
-    <section>
+    <section className="my-8">
       <p>
         Unsere Produkte können Sie{' '}
         <a href="/kontakt">bei uns an der Haustür erwerben.</a>
@@ -38,17 +38,17 @@ const ProductsPage = ({ data }) => (
         Der Einsatz von Medikamenten findet bei uns generell nicht statt!
       </strong>
     </p>
-    <section className="bg-primary p-4 rounded-lg shadow-md">
+    <section className="product-section">
       <h3>Honig</h3>
-      <section className="flex flex-wrap justify-start items-center mt-4">
-        <div className="w-1/3 lg:w-full mx-0 my-4">
+      <section className="flex flex-wrap justify-start items-center">
+        <div className="w-full mx-0 my-4 lg:w-1/3">
           <Img
             className="rounded-lg"
             fluid={data.honey.childImageSharp.fluid}
           />
         </div>
-        <div className="w-2/3 lg:w-full">
-          <h4 style={{ marginTop: '1rem' }}>Flüssig oder fest?</h4>
+        <div className="w-full lg:w-2/3 lg:pl-8">
+          <h4 className="mt-4">Flüssig oder fest?</h4>
           <p>
             Der Honig wird flüssig aus der Bienenwabe geerntet. Er besteht aus
             ca. 80% Frucht- und Traubenzucker, 18% Wasser und 1% gesunder
@@ -70,7 +70,7 @@ const ProductsPage = ({ data }) => (
         </div>
       </section>
       <section className="flex flex-wrap justify-start items-center mt-4">
-        <div className="w-2/3 lg:w-full">
+        <div className="w-full lg:w-2/3 lg:pr-8">
           <h4>Honiggewinnung</h4>
           <p>
             Honig ist seit vielen Jahrhunderten eine kostbare Substanz und die
@@ -110,7 +110,7 @@ const ProductsPage = ({ data }) => (
             </strong>
           </p>
         </div>
-        <div className="w-1/3 lg:w-full mx-0 my-4">
+        <div className="w-full lg:w-1/3 mx-0 my-4">
           <Img
             className="rounded-lg"
             fluid={data.honeyExtractor.childImageSharp.fluid}
@@ -135,16 +135,16 @@ const ProductsPage = ({ data }) => (
         </a>
       </div>
     </section>
-    <section className="bg-primary p-4 mt-4 rounded-lg shadow-md">
+    <section className="product-section">
       <h3>Bienenwachstücher</h3>
       <section className="flex flex-wrap justify-start items-center mt-4">
-        <div className="w-1/3 lg:w-full mx-0 my-4">
+        <div className="w-full lg:w-1/3 mx-0 my-4">
           <Img
             className="rounded-lg"
             fluid={data.beeswaxCloth.childImageSharp.fluid}
           />
         </div>
-        <div className="w-2/3 lg:w-full">
+        <div className="w-full lg:w-2/3 lg:pl-8">
           <p style={{ marginTop: '1rem' }}>
             Bienenwachstücher verwendet man wie Frischhaltefolie und sie
             bestehen aus Baumwolle und Bienenwachs.
