@@ -1,35 +1,38 @@
 <script setup lang="ts">
+const route = useRoute()
 const nuxtApp = useNuxtApp()
 const { activeHeadings, updateHeadings } = useScrollspy()
 
-const links = computed(() => [{
-  label: 'Features',
-  to: '#features',
-  icon: 'i-heroicons-cube-transparent',
-  active: activeHeadings.value.includes('features') && !activeHeadings.value.includes('pricing')
-}, {
-  label: 'Pricing',
-  to: '#pricing',
-  icon: 'i-heroicons-credit-card',
-  active: activeHeadings.value.includes('pricing') && !activeHeadings.value.includes('testimonials')
-}, {
-  label: 'Testimonials',
-  to: '#testimonials',
-  icon: 'i-heroicons-academic-cap',
-  active: activeHeadings.value.includes('testimonials')
-}, {
-  label: 'FAQ',
-  to: '#faq',
-  icon: 'i-heroicons-question-mark-circle',
-  active: activeHeadings.value.includes('faq')
-}])
+const links = computed(() => {
+  if (route.path !== '/') {
+    return []
+  }
+
+  return [{
+    label: 'Grundsätze',
+    to: '#principles',
+    icon: 'i-heroicons-cube-transparent',
+    active: activeHeadings.value.includes('principles') && !activeHeadings.value.includes('products')
+  },
+  {
+    label: 'Produkte',
+    to: '#products',
+    icon: 'i-heroicons-cube-transparent',
+    active: activeHeadings.value.includes('products')
+  },
+  {
+    label: 'Kontakt',
+    to: '#contact',
+    icon: 'i-heroicons-cube-transparent',
+    active: activeHeadings.value.includes('contact')
+  }]
+})
 
 nuxtApp.hooks.hookOnce('page:finish', () => {
   updateHeadings([
-    document.querySelector('#features'),
-    document.querySelector('#pricing'),
-    document.querySelector('#testimonials'),
-    document.querySelector('#faq')
+    document.querySelector('#principles'),
+    document.querySelector('#products'),
+    document.querySelector('#contact')
   ])
 })
 </script>
@@ -37,21 +40,18 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
 <template>
   <UHeader :links="links">
     <template #logo>
-      Nuxt UI Pro <UBadge
-        label="Landing"
-        variant="subtle"
-        class="mb-0.5"
-      />
+      <div class="flex items-center">
+        <nuxt-img
+          src="/logo.png"
+          alt="Logo"
+          class="w-12 h-12"
+        />
+        Privatimkerei Hoffmann
+      </div>
     </template>
 
     <template #right>
-      <UButton
-        label="Sign in"
-        color="white"
-        variant="ghost"
-        trailing-icon="i-heroicons-arrow-right-20-solid"
-        class="hidden lg:flex"
-      />
+      <UColorModeButton />
     </template>
 
     <template #panel>
@@ -59,16 +59,7 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
 
       <UDivider class="my-6" />
 
-      <UButton
-        label="Sign in"
-        color="white"
-        block
-        class="mb-3"
-      />
-      <UButton
-        label="Get started"
-        block
-      />
+      <UColorModeButton />
     </template>
   </UHeader>
 </template>

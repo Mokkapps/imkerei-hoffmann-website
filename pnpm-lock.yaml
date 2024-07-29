@@ -29,6 +29,9 @@ importers:
       nuxt:
         specifier: ^3.12.3
         version: 3.12.3(@parcel/watcher@2.4.1)(@types/node@20.14.10)(eslint@9.6.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.18.1)(terser@5.31.2)(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.10)(terser@5.31.2))(vue-tsc@2.0.26(typescript@5.5.3))
+      nuxt-umami:
+        specifier: ^2.6.4
+        version: 2.6.4
     devDependencies:
       '@nuxt/eslint':
         specifier: ^0.3.13
@@ -3511,6 +3514,9 @@ packages:
 
   nuxt-icon@0.6.10:
     resolution: {integrity: sha512-S9zHVA66ox4ZSpMWvCjqKZC4ZogC0s2z3vZs+M4D95YXGPEXwxDZu+insMKvkbe8+k7gvEmtTk0eq3KusKlxiw==}
+
+  nuxt-umami@2.6.4:
+    resolution: {integrity: sha512-R+Fv+chpa3CcLLkAERzeCFmvZcFv3irUhtAH9x4Ukm12hjHGKeUSArZK07Ld/bzkq+2WJp6QqmXdr/KK/f6g1w==}
 
   nuxt@3.12.3:
     resolution: {integrity: sha512-Qdkc+ucWwFcKsiL/OTF87jbgyFSymwPRKiiu0mvzsd/RXTn4hGiBduAlF3f7Yy0F9pDjSj8XHKDSnHYsDzm6rA==}
@@ -9358,6 +9364,8 @@ snapshots:
       - supports-color
       - vite
       - vue
+
+  nuxt-umami@2.6.4: {}
 
   nuxt@3.12.3(@parcel/watcher@2.4.1)(@types/node@20.14.10)(eslint@9.6.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.18.1)(terser@5.31.2)(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.10)(terser@5.31.2))(vue-tsc@2.0.26(typescript@5.5.3)):
     dependencies:

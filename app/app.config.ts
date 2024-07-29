@@ -1,7 +1,7 @@
 export default defineAppConfig({
   ui: {
-    primary: 'indigo',
-    gray: 'zinc',
+    primary: 'amber',
+    gray: 'stone',
     variables: {
       light: {
         background: 'var(--color-gray-50)'
@@ -38,17 +38,15 @@ export default defineAppConfig({
         wrapper: 'border-t border-gray-200 dark:border-gray-800'
       }
     },
-    pricing: {
-      card: {
-        highlight: 'ring-gray-900 dark:ring-white',
-        features: {
-          item: {
-            icon: {
-              base: 'text-gray-900 dark:text-white'
-            }
-          }
-        }
+    landing: {
+      hero: {
+        title: 'text-5xl font-bold tracking-tight text-gray-900 dark:text-amber-400 sm:text-7xl'
       }
     }
+  },
+  umami: {
+    domains: ['privatimkerei-hoffmann.de'],
+    ignoreLocalhost: true,
+    version: 2
   }
 })
