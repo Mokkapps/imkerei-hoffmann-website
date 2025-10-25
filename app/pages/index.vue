@@ -79,7 +79,7 @@ useSeoMeta({
         >
           <nuxt-img
             src="/bees.jpg"
-            class="w-full rounded-md h-[15rem]"
+            class="w-full rounded-md h-60"
           />
         </ULandingCard>
         <ULandingCard
@@ -89,7 +89,7 @@ useSeoMeta({
         >
           <nuxt-img
             src="/honey.jpg"
-            class="w-full rounded-md h-[15rem]"
+            class="w-full rounded-md h-60"
           />
         </ULandingCard>
         <ULandingCard
@@ -99,7 +99,7 @@ useSeoMeta({
         >
           <nuxt-img
             src="/regional.jpg"
-            class="object-fit w-full rounded-md h-[15rem] "
+            class="object-fit w-full rounded-md h-60 "
           />
         </ULandingCard>
       </UPageGrid>
