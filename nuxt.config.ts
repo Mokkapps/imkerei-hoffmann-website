@@ -25,7 +25,15 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxt/fonts', 'nuxt-umami', '@nuxt/image', '@nuxtjs/seo'],
+  modules: [
+    '@nuxt/ui',
+    '@nuxt/eslint',
+    '@nuxt/fonts',
+    '@nuxt/image',
+    '@nuxt/content',
+    '@nuxtjs/seo',
+    'nuxt-umami',
+  ],
 
   routeRules: {
     // Temporary workaround for prerender regression. see https://github.com/nuxt/nuxt/issues/27490

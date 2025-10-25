@@ -1,6 +1,6 @@
 {
   "name": "imkerei-hoffmann-website",
-  "description": "Website of Privateimkerei Hoffmann",
+  "description": "Website of Privatimkerei Hoffmann",
   "author": "Michael Hoffmann <mail@mokkaps.de>",
   "repository": {
     "type": "git",
@@ -26,9 +26,12 @@
     "@nuxt/image": "^1.11.0",
     "@nuxt/ui": "^4.1.0",
     "@nuxtjs/seo": "3.2.2",
+    "better-sqlite3": "^12.4.1",
     "nuxt": "4.1.2",
     "nuxt-umami": "^3.2.1",
-    "tailwindcss": "^4.1.16"
+    "tailwindcss": "^4.1.16",
+    "zod": "^4.1.12",
+    "zod-to-json-schema": "^3.24.6"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.0.0",

@@ -1,39 +1,29 @@
 <script setup lang="ts">
 useHead({
-  meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-  ],
-  link: [
-    { rel: 'icon', href: '/favicon.ico' }
-  ],
   htmlAttrs: {
-    lang: 'de'
-  }
+    lang: 'de',
+  },
+  link: [
+    { href: '/favicon.ico', rel: 'icon' },
+  ],
+  meta: [
+    { content: 'width=device-width, initial-scale=1', name: 'viewport' },
+  ],
 })
 
 useSeoMeta({
   ogImage: 'https://landing-template.nuxt.dev/social-card.png',
+  twitterCard: 'summary_large_image',
   twitterImage: 'https://landing-template.nuxt.dev/social-card.png',
-  twitterCard: 'summary_large_image'
 })
 </script>
 
 <template>
   <UApp>
-    <AppHeader />
+    <NuxtLoadingIndicator />
 
-    <UMain>
-      <NuxtLayout>
-        <NuxtPage />
-      </NuxtLayout>
-    </UMain>
-
-    <USeparator
-      icon="i-simple-icons-nuxtdotjs"
-      type="dashed"
-      class="h-px"
-    />
-
-    <AppFooter />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </UApp>
 </template>

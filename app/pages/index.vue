@@ -18,9 +18,11 @@ const items = [
 
 const ctaLinks = ref([
   {
+    icon: 'i-heroicons-envelope',
     label: 'Kontaktieren Sie mich',
+    size: 'xl',
     target: '_blank',
-    to: 'mailto:kontakt@privatimkerei-hoffmann.de',
+    to: `mailto:${siteMetadata.email}`,
   },
 ])
 
