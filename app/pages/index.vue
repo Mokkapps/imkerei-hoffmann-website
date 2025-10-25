@@ -4,16 +4,25 @@ import siteMetadata from '~/siteMetadata'
 const items = [
   {
     label: 'Flüssiger oder fester Honig?',
-    slot: 'konsistenz'
+    slot: 'konsistenz',
   },
   {
     label: 'Wie ernte ich den Honig?',
-    slot: 'honigschleuder'
+    slot: 'honigschleuder',
   },
   {
     label: 'Was bedeutet „Honig aus EU- und Nicht-EU-Ländern“?',
-    slot: 'eu-honey'
-  }]
+    slot: 'eu-honey',
+  },
+]
+
+const ctaLinks = ref([
+  {
+    label: 'Kontaktieren Sie mich',
+    target: '_blank',
+    to: 'mailto:kontakt@privatimkerei-hoffmann.de',
+  },
+])
 
 const { public: { googleMapsApiKey } } = useRuntimeConfig()
 
@@ -21,19 +30,25 @@ const googleMapsUrl = `https://www.google.com/maps/embed/v1/place?key=${googleMa
     &q=Pfarrhofstraße+7,94267+Prackenbach`
 
 useSeoMeta({
-  title: siteMetadata.title,
-  ogTitle: siteMetadata.title,
   description: siteMetadata.description,
-  ogDescription: siteMetadata.description
+  ogDescription: siteMetadata.description,
+  ogTitle: siteMetadata.title,
+  title: siteMetadata.title,
 })
 </script>
 
 <template>
   <div>
     <UPageHero
-      :links="[{ label: 'Kontaktieren Sie mich', icon: 'i-heroicons-envelope', color: 'amber', size: 'xl', to: '/#contact' }]"
+      :links="[{ label: 'Kontaktieren Sie mich', icon: 'i-heroicons-envelope', size: 'xl', to: '/#contact' }]"
       orientation="horizontal"
     >
+      <template #top>
+        <div class="absolute rounded-full dark:bg-(--ui-primary) blur-[300px] size-60 sm:size-80 transform -translate-x-1/2 left-1/2 -translate-y-80" />
+
+        <LazyStarsBg />
+      </template>
+
       <nuxt-img
         src="/me.jpg"
         alt="Hero"
@@ -76,6 +91,8 @@ useSeoMeta({
           title="Gesunde, vitale Bienen"
           description="Ohne Medikamenteneinsatz"
           color="primary"
+          spotlight
+          spotlight-color="primary"
         >
           <nuxt-img
             src="/bees.jpg"
@@ -86,6 +103,8 @@ useSeoMeta({
           title="Erstklassiger Honig"
           description="Hergestellt nach den strengen Qualitätskriterien"
           color="primary"
+          spotlight
+          spotlight-color="primary"
         >
           <nuxt-img
             src="/honey.jpg"
@@ -96,6 +115,8 @@ useSeoMeta({
           title="100% regionaler Honig"
           description="Ich imkere nur im Landkreis Regen & Straubing-Bogen"
           color="primary"
+          spotlight
+          spotlight-color="primary"
         >
           <nuxt-img
             src="/regional.jpg"
@@ -121,6 +142,8 @@ useSeoMeta({
       <UPageCard
         orientation="horizontal"
         title="Honig"
+        spotlight
+        spotlight-color="primary"
       >
         <nuxt-img
           src="/honey.jpg"
@@ -133,7 +156,8 @@ useSeoMeta({
       <UAccordion
         :items="items"
         color="primary"
-        size="xl"
+        :unmount-on-hide="false"
+        :ui="{ trigger: 'text-base', body: 'text-base text-muted' }"
       >
         <template #konsistenz>
           <div class="flex gap-8">
@@ -186,6 +210,8 @@ useSeoMeta({
       <UPageCard
         title="Bienenwachstücher"
         orientation="horizontal"
+        spotlight
+        spotlight-color="primary"
       >
         <nuxt-img
           src="/bienenwachstuch.jpg"
@@ -214,51 +240,51 @@ useSeoMeta({
       </UPageCard>
     </UPageSection>
 
-    <UPageSection
+    <UPageCTA
+      id="contact"
       title="Kontakt"
-      icon="i-heroicons-envelope"
+      variant="soft"
+      description="Ich freue mich über Ihre Anfrage!"
+      :links="ctaLinks"
+      orientation="horizontal"
     >
+      <UPageCard
+        title="Standort"
+      >
+        <template #description>
+          <iframe
+            width="600"
+            height="450"
+            style="border:0"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            :src="googleMapsUrl"
+          />
+        </template>
+      </UPageCard>
+
       <template #description>
-        <div class="flex flex-col gap-8">
-          <div class="flex flex-col gap-2">
-            <p id="contact">
-              Ich freue mich über Ihre Anfrage!
-            </p>
+        <div class="flex flex-col gap-2">
+          <span class="text-xl">Ich freue mich auf Ihre Anfrage!</span>
+          <div class="flex flex-col text-sm">
+            <span>Renate Hoffmann</span>
+            <span>Pfarrhofstraße 7</span>
+            <span>94267 Prackenbach</span>
+            <span>Telefon: <NuxtLink
+              to="tel:09944/2283"
+              class="text-primary underline"
+            >09944/2283</NuxtLink></span>
+            <span>Email: <NuxtLink
+              to="mailto:kontakt@privatimkerei-hoffmann.de"
+              class="text-primary underline"
+            >kontakt@privatimkerei-hoffmann.de</NuxtLink></span>
           </div>
-          <UPageGrid>
-            <UPageCard title="Kontaktdaten" class="col-span-6 row-span-2">
-              <template #description>
-                <div class="flex flex-col">
-                  <span>Renate Hoffmann</span>
-                  <span>Pfarrhofstraße 7</span>
-                  <span>94267 Prackenbach</span>
-                  <span>Telefon: <NuxtLink
-                    to="tel:09944/2283"
-                    class="text-primary underline"
-                  >09944/2283</NuxtLink></span>
-                  <span>Email: <NuxtLink
-                    to="mailto:kontakt@privatimkerei-hoffmann.de"
-                    class="text-primary underline"
-                  >kontakt@privatimkerei-hoffmann.de</NuxtLink></span>
-                </div>
-              </template>
-            </UPageCard>
-            <UPageCard title="Standort" class="col-span-6 row-span-2">
-              <template #description>
-                <iframe
-                  width="600"
-                  height="450"
-                  style="border:0"
-                  loading="lazy"
-                  allowfullscreen
-                  referrerpolicy="no-referrer-when-downgrade"
-                  :src="googleMapsUrl"
-                />
-              </template>
-            </UPageCard>
-          </UPageGrid>
         </div>
       </template>
-    </UPageSection>
+
+      <div class="absolute rounded-full dark:bg-(--ui-primary) blur-[250px] size-40 sm:size-50 transform -translate-x-1/2 left-1/2 -translate-y-80" />
+      <StarsBg />
+    </UPageCTA>
   </div>
 </template>

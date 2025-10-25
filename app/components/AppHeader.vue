@@ -5,28 +5,23 @@ const route = useRoute()
 const nuxtApp = useNuxtApp()
 const { activeHeadings, updateHeadings } = useScrollspy()
 
-const items = computed<NavigationMenuItem[]>(() => {
+const items = computed<Array<NavigationMenuItem>>(() => {
   if (route.path !== '/') {
     return []
   }
 
   return [{
+    active: activeHeadings.value.includes('principles') && !activeHeadings.value.includes('products'),
     label: 'Grundsätze',
     to: '#principles',
-    icon: 'i-heroicons-cube-transparent',
-    active: activeHeadings.value.includes('principles') && !activeHeadings.value.includes('products')
-  },
-  {
+  }, {
+    active: activeHeadings.value.includes('products'),
     label: 'Produkte',
     to: '#products',
-    icon: 'i-heroicons-cube-transparent',
-    active: activeHeadings.value.includes('products')
-  },
-  {
+  }, {
+    active: activeHeadings.value.includes('contact'),
     label: 'Kontakt',
     to: '#contact',
-    icon: 'i-heroicons-cube-transparent',
-    active: activeHeadings.value.includes('contact')
   }]
 })
 
@@ -34,7 +29,7 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
   updateHeadings([
     document.querySelector('#principles'),
     document.querySelector('#products'),
-    document.querySelector('#contact')
+    document.querySelector('#contact'),
   ])
 })
 </script>
@@ -52,7 +47,9 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
       </div>
     </template>
 
-    <UNavigationMenu :items="items" />
+    <UNavigationMenu
+      :items="items"
+    />
 
     <template #right>
       <UColorModeButton />

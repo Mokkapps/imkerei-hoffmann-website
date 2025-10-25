@@ -1,7 +1,5 @@
 import siteMetadata from './app/siteMetadata'
 
-// FIXME: NUXT SEO
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-10-01',
@@ -27,7 +25,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxt/fonts', 'nuxt-umami', '@nuxt/image'],
+  modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxt/fonts', 'nuxt-umami', '@nuxt/image', '@nuxtjs/seo'],
 
   routeRules: {
     // Temporary workaround for prerender regression. see https://github.com/nuxt/nuxt/issues/27490
