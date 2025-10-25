@@ -35,9 +35,10 @@ export default defineNuxtConfig({
     'nuxt-umami',
   ],
 
-  routeRules: {
-    // Temporary workaround for prerender regression. see https://github.com/nuxt/nuxt/issues/27490
-    '/': { prerender: true },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+    },
   },
 
   runtimeConfig: {
