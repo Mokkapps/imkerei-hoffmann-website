@@ -12,6 +12,8 @@ export default defineNuxtConfig({
     '@nuxt/ui'
   ],
 
+  css: ['~/assets/css/main.css'],
+
   ui: {
     icons: ['heroicons', 'simple-icons']
   },
@@ -31,10 +33,6 @@ export default defineNuxtConfig({
     enabled: true
   },
 
-  typescript: {
-    strict: false
-  },
-
   future: {
     compatibilityVersion: 4
   },
@@ -48,7 +46,7 @@ export default defineNuxtConfig({
     }
   },
 
-  compatibilityDate: '2024-07-11',
+  compatibilityDate: '2025-10-01',
 
   image: {
     provider: 'twicpics',
