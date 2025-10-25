@@ -13,13 +13,17 @@ defineProps<{
     <UContainer>
       <UMain>
         <UPage>
-          <UPageError :error="error" />
+          <UError :error="error" />
         </UPage>
       </UMain>
-
-      <AppFooter />
-
-      <UNotifications />
     </UContainer>
+
+    <USeparator
+      icon="i-simple-icons-nuxtdotjs"
+      type="dashed"
+      class="h-px"
+    />
+
+    <AppFooter />
   </div>
 </template>

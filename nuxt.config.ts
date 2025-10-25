@@ -1,66 +1,55 @@
 import siteMetadata from './app/siteMetadata'
 
+// FIXME: NUXT SEO
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  extends: ['@nuxt/ui-pro', 'nuxt-umami'],
-
-  modules: [
-    '@nuxt/content',
-    '@nuxt/eslint',
-    '@nuxt/fonts',
-    '@nuxt/image',
-    '@nuxt/ui'
-  ],
+  compatibilityDate: '2025-10-01',
 
   css: ['~/assets/css/main.css'],
 
-  ui: {
-    icons: ['heroicons', 'simple-icons']
-  },
-
-  routeRules: {
-    // Temporary workaround for prerender regression. see https://github.com/nuxt/nuxt/issues/27490
-    '/': { prerender: true }
-  },
-
-  runtimeConfig: {
-    public: {
-      googleMapsApiKey: ''
-    }
-  },
-
   devtools: {
-    enabled: true
-  },
-
-  future: {
-    compatibilityVersion: 4
+    enabled: true,
   },
 
   eslint: {
     config: {
-      stylistic: {
-        commaDangle: 'never',
-        braceStyle: '1tbs'
-      }
-    }
+      standalone: false,
+    },
   },
 
-  compatibilityDate: '2025-10-01',
-
   image: {
-    provider: 'twicpics',
-    twicpics: {
-      baseURL: siteMetadata.twicPicsBaseUrl
-    },
     domains: ['mokkapps.twic.pics'],
-    screens: { 'xs': 320, 'sm': 640, 'md': 768, 'lg': 1024, 'xl': 1280, 'xxl': 1536, '2xl': 1536 }
+    provider: 'twicpics',
+    screens: { '2xl': 1536, 'lg': 1024, 'md': 768, 'sm': 640, 'xl': 1280, 'xs': 320, 'xxl': 1536 },
+    twicpics: {
+      baseURL: siteMetadata.twicPicsBaseUrl,
+    },
+  },
+
+  modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxt/fonts', 'nuxt-umami', '@nuxt/image'],
+
+  routeRules: {
+    // Temporary workaround for prerender regression. see https://github.com/nuxt/nuxt/issues/27490
+    '/': { prerender: true },
+  },
+
+  runtimeConfig: {
+    public: {
+      googleMapsApiKey: '',
+    },
   },
 
   site: {
-    url: siteMetadata.url,
-    name: siteMetadata.title,
+    defaultLocale: 'de',
     description: siteMetadata.description,
-    defaultLocale: 'de'
-  }
+    name: siteMetadata.title,
+    url: siteMetadata.url,
+  },
+
+  umami: {
+    domains: ['privatimkerei-hoffmann.de'],
+    ignoreLocalhost: true,
+    proxy: 'cloak',
+  },
 })

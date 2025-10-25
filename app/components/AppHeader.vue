@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import type { NavigationMenuItem } from '@nuxt/ui'
+
 const route = useRoute()
 const nuxtApp = useNuxtApp()
 const { activeHeadings, updateHeadings } = useScrollspy()
 
-const links = computed(() => {
+const items = computed<NavigationMenuItem[]>(() => {
   if (route.path !== '/') {
     return []
   }
@@ -38,8 +40,8 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
 </script>
 
 <template>
-  <UHeader :links="links">
-    <template #logo>
+  <UHeader>
+    <template #title>
       <div class="flex items-center">
         <nuxt-img
           src="/logo.png"
@@ -50,16 +52,18 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
       </div>
     </template>
 
+    <UNavigationMenu :items="items" />
+
     <template #right>
       <UColorModeButton />
     </template>
 
-    <template #panel>
-      <UAsideLinks :links="links" />
-
-      <UDivider class="my-6" />
-
-      <UColorModeButton />
+    <template #body>
+      <UNavigationMenu
+        :items="items"
+        orientation="vertical"
+        class="-mx-2.5"
+      />
     </template>
   </UHeader>
 </template>

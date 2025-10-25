@@ -1,15 +1,17 @@
 <script setup lang="ts">
-const links = [{
+import type { NavigationMenuItem } from '@nuxt/ui'
+
+const items: Array<NavigationMenuItem> = [{
   label: 'Impressum',
-  to: '/impressum'
+  to: '/impressum',
 }, {
   label: 'Datenschutz',
-  to: '/datenschutz'
+  to: '/datenschutz',
 }]
 </script>
 
 <template>
-  <UFooter :links="links">
+  <UFooter>
     <template #left>
       <span class="text-sm text-gray-500 dark:text-gray-400">
         <p>
@@ -26,6 +28,11 @@ const links = [{
         </p>
       </span>
     </template>
+
+    <UNavigationMenu
+      :items="items"
+      variant="link"
+    />
 
     <template #right>
       <UColorModeButton size="sm" />

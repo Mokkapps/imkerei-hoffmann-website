@@ -30,7 +30,7 @@ useSeoMeta({
 
 <template>
   <div>
-    <ULandingHero
+    <UPageHero
       :links="[{ label: 'Kontaktieren Sie mich', icon: 'i-heroicons-envelope', color: 'amber', size: 'xl', to: '/#contact' }]"
       orientation="horizontal"
     >
@@ -63,16 +63,16 @@ useSeoMeta({
           </p>
         </div>
       </template>
-    </ULandingHero>
+    </UPageHero>
 
-    <ULandingSection
+    <UPageSection
       title="Meine Grundsätze"
       icon="i-heroicons-star"
     >
       <UPageGrid
         id="principles"
       >
-        <ULandingCard
+        <UPageCard
           title="Gesunde, vitale Bienen"
           description="Ohne Medikamenteneinsatz"
           color="primary"
@@ -81,8 +81,8 @@ useSeoMeta({
             src="/bees.jpg"
             class="w-full rounded-md h-60"
           />
-        </ULandingCard>
-        <ULandingCard
+        </UPageCard>
+        <UPageCard
           title="Erstklassiger Honig"
           description="Hergestellt nach den strengen Qualitätskriterien"
           color="primary"
@@ -91,8 +91,8 @@ useSeoMeta({
             src="/honey.jpg"
             class="w-full rounded-md h-60"
           />
-        </ULandingCard>
-        <ULandingCard
+        </UPageCard>
+        <UPageCard
           title="100% regionaler Honig"
           description="Ich imkere nur im Landkreis Regen & Straubing-Bogen"
           color="primary"
@@ -101,11 +101,11 @@ useSeoMeta({
             src="/regional.jpg"
             class="object-fit w-full rounded-md h-60 "
           />
-        </ULandingCard>
+        </UPageCard>
       </UPageGrid>
-    </ULandingSection>
+    </UPageSection>
 
-    <ULandingSection
+    <UPageSection
       icon="i-heroicons-shopping-cart"
       title="Meine Produkte"
     >
@@ -118,7 +118,7 @@ useSeoMeta({
         </p>
       </template>
 
-      <ULandingCard
+      <UPageCard
         orientation="horizontal"
         title="Honig"
       >
@@ -129,7 +129,7 @@ useSeoMeta({
         <template #description>
           <p>Der Honig wird flüssig aus der Bienenwabe geerntet. Er besteht aus ca. 80% Frucht- und Traubenzucker, 18% Wasser und 1% gesunder Wirkstoffe. Ob der Honig flüssig oder fest ist, entscheidet das Mischverhältnis von Frucht- und Traubenzucker. Festen Honig bezeichnet man auch als kristallisierten Honig. Honig mit hohem Traubenzuckeranteil kristallisiert schneller. Durch regelmäßiges Rühren des Honigs werden die Zuckerkristalle zerkleinert und sie verteilen sich gleichmäßig, wodurch cremiger Honig ensteht. Der cremig-gerührte Honig bleibt in dieser Konsistenz.</p>
         </template>
-      </ULandingCard>
+      </UPageCard>
       <UAccordion
         :items="items"
         color="primary"
@@ -183,7 +183,7 @@ useSeoMeta({
         </template>
       </UAccordion>
 
-      <ULandingCard
+      <UPageCard
         title="Bienenwachstücher"
         orientation="horizontal"
       >
@@ -211,10 +211,10 @@ useSeoMeta({
             <p>Zum Reinigen reicht es das Tuch feucht abzuwischen oder unter unter fliessendem (kalten bis handwarmen) Wasser abzuspülen.</p>
           </div>
         </template>
-      </ULandingCard>
-    </ULandingSection>
+      </UPageCard>
+    </UPageSection>
 
-    <ULandingSection
+    <UPageSection
       title="Kontakt"
       icon="i-heroicons-envelope"
     >
@@ -225,8 +225,8 @@ useSeoMeta({
               Ich freue mich über Ihre Anfrage!
             </p>
           </div>
-          <ULandingGrid>
-            <ULandingCard title="Kontaktdaten" class="col-span-6 row-span-2">
+          <UPageGrid>
+            <UPageCard title="Kontaktdaten" class="col-span-6 row-span-2">
               <template #description>
                 <div class="flex flex-col">
                   <span>Renate Hoffmann</span>
@@ -242,8 +242,8 @@ useSeoMeta({
                   >kontakt@privatimkerei-hoffmann.de</NuxtLink></span>
                 </div>
               </template>
-            </ULandingCard>
-            <ULandingCard title="Standort" class="col-span-6 row-span-2">
+            </UPageCard>
+            <UPageCard title="Standort" class="col-span-6 row-span-2">
               <template #description>
                 <iframe
                   width="600"
@@ -255,10 +255,10 @@ useSeoMeta({
                   :src="googleMapsUrl"
                 />
               </template>
-            </ULandingCard>
-          </ULandingGrid>
+            </UPageCard>
+          </UPageGrid>
         </div>
       </template>
-    </ULandingSection>
+    </UPageSection>
   </div>
 </template>

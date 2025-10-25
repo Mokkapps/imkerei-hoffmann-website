@@ -19,13 +19,21 @@ useSeoMeta({
 </script>
 
 <template>
-  <AppHeader />
+  <UApp>
+    <AppHeader />
 
-  <UMain>
-    <NuxtPage />
-  </UMain>
+    <UMain>
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </UMain>
 
-  <AppFooter />
+    <USeparator
+      icon="i-simple-icons-nuxtdotjs"
+      type="dashed"
+      class="h-px"
+    />
 
-  <UNotifications />
+    <AppFooter />
+  </UApp>
 </template>
