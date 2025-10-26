@@ -1,3 +1,5 @@
+import { defineOrganization } from 'nuxt-schema-org/schema'
+
 import siteMetadata from './app/siteMetadata'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -46,6 +48,13 @@ export default defineNuxtConfig({
     public: {
       googleMapsApiKey: '',
     },
+  },
+
+  schemaOrg: {
+    identity: defineOrganization({
+      logo: `${siteMetadata.twicPicsBaseUrl}/logo.png`,
+      name: siteMetadata.title,
+    }),
   },
 
   site: {

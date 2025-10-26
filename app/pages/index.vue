@@ -31,10 +31,9 @@ const { public: { googleMapsApiKey } } = useRuntimeConfig()
 const googleMapsUrl = `https://www.google.com/maps/embed/v1/place?key=${googleMapsApiKey}
     &q=Pfarrhofstraße+7,94267+Prackenbach`
 
-useSeoMeta({
-  description: siteMetadata.description,
-  ogDescription: siteMetadata.description,
-  ogTitle: siteMetadata.title,
+defineOgImageComponent('NuxtSeo', {
+  description: 'Die Imkertradition geht in unserer Familie bis in das Jahr 1890 zurück.',
+  theme: '#B29712',
   title: siteMetadata.title,
 })
 </script>
