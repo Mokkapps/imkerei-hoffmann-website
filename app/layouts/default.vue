@@ -1,5 +1,5 @@
 <template>
-  <UApp>
+  <div>
     <AppHeader />
 
     <UMain>
@@ -11,5 +11,5 @@
     />
 
     <AppFooter />
-  </UApp>
+  </div>
 </template>
